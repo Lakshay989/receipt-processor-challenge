@@ -1,7 +1,3 @@
-### File: `README.md`
-
----
-
 # Receipt Processor
 
 This project is a receipt processing service that fulfills the documented API requirements. It processes receipts and calculates points based on specific rules.
@@ -22,7 +18,6 @@ This project is a receipt processing service that fulfills the documented API re
 
 Ensure that you have the following installed:
 - Go (version 1.16 or later)
-- Docker (optional, if you want to use Docker)
 
 ### Installation
 
@@ -45,20 +40,6 @@ Ensure that you have the following installed:
 4. Build the project:
     ```bash
     go build
-    ```
-
-### Docker Setup (Optional)
-
-If you're using Docker to run the service, create the Docker image and run the container:
-
-1. Build the Docker image:
-    ```bash
-    docker build -t receipt-processor .
-    ```
-
-2. Run the Docker container:
-    ```bash
-    docker run -p 8080:8080 receipt-processor
     ```
 
 ---
@@ -89,7 +70,7 @@ The service exposes two main endpoints:
 - **Payload**: Receipt JSON
 - **Response**: JSON containing an ID for the receipt.
 
-#### Example Request:
+#### Example Request(Should be from the path of the simple-receipt.json or the respective example file):
 ```bash
 curl -X POST http://localhost:8080/receipts/process -d @simple-receipt.json --header "Content-Type: application/json"
 ```
